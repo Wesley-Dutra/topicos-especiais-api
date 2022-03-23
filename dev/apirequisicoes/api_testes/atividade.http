@@ -1,0 +1,43 @@
+@apiUrl = http://localhost:3000/api 
+
+
+# Obter a lista de atividades
+GET {{apiUrl}}/atividade
+Content-Type: application/json
+###
+
+
+# Inserir novo atividade
+POST {{apiUrl}}/atividade
+Content-Type: application/json
+
+{
+ "titulo": "Programação",
+ "descricao": "Deenvolver uma API", 
+ "status": "Em progresso",
+ "prazo": "06/22/2022",
+ "agendaInicio": "02/15/2022",
+ "dataHoraTermino": "05/14/2022"
+}
+###
+
+
+# Alterar atividade
+PUT {{apiUrl}}/atividade
+Content-Type: application/json
+
+{
+ "_id": "623a70cdd11d82e64f4b7140",
+ "descricao": "Desenvolver uma API"
+}
+###
+
+# Excluir um atividade
+DELETE {{apiUrl}}/atividade/623a70cdd11d82e64f4b7140
+Content-Type: application/json
+###
+
+# Obter atividade filtrando
+GET {{apiUrl}}/atividade/filtro/Programação
+Content-Type: application/json
+###

@@ -1,4 +1,69 @@
+@apiUrl = http://localhost:3000/api 
+
 # Obter a lista de usuários
-GET http://localhost:3000/api/colaboradores
+GET {{apiUrl}}/colaboradores
+Content-Type: application/json
+###
+
+
+# Inserir novo usuário
+POST {{apiUrl}}/colaboradores
+Content-Type: application/json
+
+
+{
+ "nome": "Wesley Dutra Paiz", 
+ "email": "182749@upf.br", 
+ "senha": "123"
+}
+
+###
+
+
+# Usuário sem nome requerido.
+POST {{apiUrl}}/colaboradores
+Content-Type: application/json
+
+{
+ "nome": "",
+ "email": "jaqson@upf.br",
+ "senha": "123"
+}
+###
+
+
+# Usuário com email duplicado.
+POST {{apiUrl}}/colaboradores
+Content-Type: application/json
+
+{
+ "nome": "Jaqson",
+ "email": "182749@upf.br",
+ "senha": "123"
+}
+###
+
+
+# Alterar usuário
+PUT {{apiUrl}}/colaboradores
+Content-Type: application/json
+
+{
+ "_id": "5f6cba8798eca62ccce84ba7",
+ "nome": "Jaqson alterado",
+ "email": "jaqson@teste.com"
+}
+###
+
+
+
+# Excluir um usuário
+DELETE {{apiUrl}}/colaboradores/623a5532be9a963f67bc50d4
+Content-Type: application/json
+###
+
+
+# Obter usuários filtrando
+GET {{apiUrl}}/colaboradores/filtro/Fulano
 Content-Type: application/json
 ###

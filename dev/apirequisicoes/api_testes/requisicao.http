@@ -1,0 +1,44 @@
+@apiUrl = http://localhost:3000/api 
+
+
+# Obter a lista de requisicao
+GET {{apiUrl}}/requisicao
+Content-Type: application/json
+###
+
+
+# Inserir novo requisicao
+POST {{apiUrl}}/requisicao
+Content-Type: application/json
+
+{
+ "titulo": "Desenvolvimento de Software",
+ "descricao": "Programação de software",
+ "dataHoraCriada": "03/22/2022",
+ "status": "Concluida",
+ "prazoAtendimento": "03/23/2022"
+}
+###
+
+
+# Alterar requisicao
+PUT {{apiUrl}}/requisicao
+Content-Type: application/json
+
+{
+ "_id": "623a6095514e5bdfb7b50c87",
+ "dataHora": "10/05/2002",
+ "titulo": "Alguma coisa que não sei",
+ "descricao": "Teste para ver se funciona"
+}
+###
+
+# Excluir um requisicao
+DELETE {{apiUrl}}/requisicao/623a70cdd11d82e64f4b7140
+Content-Type: application/json
+###
+
+# Obter requisicao filtrando
+GET {{apiUrl}}/requisicao/filtro/i
+Content-Type: application/json
+###
