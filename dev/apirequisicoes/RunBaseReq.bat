@@ -1,4 +1,5 @@
-mongod --port 27018 --dbpath C:\Users\182749\Documents\Topicos\topicos-especiais-api\mongo\BaseRequisicoes --auth
+mongod --port 27018 --dbpath C:\Users\182749\Documents\Topicos\topicos-especiais-api\mongo\BaseRequisicoes --auth 
+rem --repair
 
 rem mongo --port 27018
 rem mongo -u "admin" -p "admin" --authenticationDatabase "BaseRequisicoes" --port 27018
