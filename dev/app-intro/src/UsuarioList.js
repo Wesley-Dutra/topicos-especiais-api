@@ -3,7 +3,7 @@ const UsuarioList = (props) => {
         <div>
             <h4>Listagem de usuários</h4>
             <button onClick={props.onClickAtualizar} type="button" class="btn btn-primary btn-sm">Atualizar Lista</button>
-            <button type="button" class="btn btn-primary btn-sm">Inserir</button>
+            <button onClick={props.inserir} type="button" class="btn btn-primary btn-sm">Inserir</button>
             <table className='table'>
             <thead>
                 <tr>
@@ -19,13 +19,13 @@ const UsuarioList = (props) => {
                     <td>{o.email}</td>
                     <td>{o.celular}</td>
                     <td>
-                        <button type="button" class="btn btn-success btn-sm">Editar</button>
+                        <button onClick={() => props.editar(o.id)} type="button" class="btn btn-success btn-sm">Editar</button>
                         <button onClick={() => props.excluir(o.id)} type="button" class="btn btn-dark btn-sm">Excluir</button>
                     </td>
                 </tr>
                 ))) : (
                 <tr>
-                    <td colSpan={5}>Nenhum usuário.</td>
+                    <td colSpan={6}>Nenhum usuário.</td>
                 </tr>
                 )}
             </tbody>
